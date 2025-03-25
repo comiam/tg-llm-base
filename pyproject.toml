@@ -1,0 +1,33 @@
+[project]
+name = "tg-llm-base"
+version = "1.0.0"
+description = "LM base from tg message notices"
+authors = [
+    {name = "Maxim Bolshim",email = "maxim.bolshim@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "ruff (>=0.11.2,<0.12.0)",
+    "telethon (>=1.39.0,<2.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "langchain-community (>=0.3.20,<0.4.0)",
+    "openai (>=1.68.2,<2.0.0)",
+    "tiktoken (>=0.9.0,<0.10.0)",
+    "faiss-cpu (>=1.10.0,<2.0.0)",
+    "langchain-openai (>=0.3.10,<0.4.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+target-version = "py39"
+exclude = ["venv", ".venv", "__pycache__", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "C", "N", "ANN"]
+ignore = []
+per-file-ignores = { "__init__.py" = ["F401"] }

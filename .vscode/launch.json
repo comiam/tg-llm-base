@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: query",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "console": "integratedTerminal",
+            "args": "query --channel \"-1002208853832\"",
+        },
+        {
+            "name": "Python Debugger: list-groups",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "console": "integratedTerminal",
+            "args": "list-groups"
+        },
+        {
+            "name": "Python Debugger: update vec-store",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "console": "integratedTerminal",
+            "args": "update --channel \"-1002208853832\""
+        }
+    ]
+}
